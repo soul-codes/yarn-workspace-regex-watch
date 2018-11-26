@@ -1,0 +1,20 @@
+{
+  "name": "yarn-workspace-regex-watch",
+  "version": "0.0.1",
+  "description": "Run scripts on yarn workspaces filtered by regex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soul-codes/yarn-workspace-regex-watch.git"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "concurrently": "^4.1.0"
+  },
+  "bin": {
+    "wwatch": "./index.js"
+  },
+  "devDependencies": {
+    "release-it": "^8.0.1"
+  }
+}

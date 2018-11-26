@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "concurrently": "^4.1.0"
   },
   "scripts": {

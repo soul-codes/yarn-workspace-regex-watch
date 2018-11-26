@@ -11,6 +11,9 @@
   "peerDependencies": {
     "concurrently": "^4.1.0"
   },
+  "scripts": {
+    "release": "release-it"
+  },
   "bin": {
     "wwatch": "./index.js"
   },

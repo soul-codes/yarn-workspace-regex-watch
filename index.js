@@ -4,7 +4,7 @@ const concurrently = require("concurrently");
 const colors = ["green", "yellow", "blue", "magenta", "cyan"];
 
 const workspaces = Object.keys(JSON.parse(execSync("yarn workspaces info")));
-const regexText = process.argv[2] || ".*";
+const regexText = process.argv.slice(2).join("|") || ".*";
 console.log(
   `Launching watch scripts for workspace packages matching regex /${regexText}/`
 );

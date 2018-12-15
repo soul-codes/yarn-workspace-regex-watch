@@ -15,7 +15,7 @@
     "release": "release-it"
   },
   "bin": {
-    "wwatch": "./index.js"
+    "wswatch": "./index.js"
   },
   "devDependencies": {
     "release-it": "^8.0.1"

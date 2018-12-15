@@ -9,7 +9,7 @@ console.log(
   `Launching watch scripts for workspace packages matching regex /${regexText}/`
 );
 
-const regex = new RegExp(process.argv[2] || ".*");
+const regex = new RegExp(regexText);
 const targets = workspaces.filter(package => regex.test(package));
 if (!targets.length) {
   console.error("No workspace package matched. Not doing anything.");

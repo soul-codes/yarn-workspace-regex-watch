@@ -1,6 +1,6 @@
 {
   "name": "yarn-workspace-regex-watch",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Run scripts on yarn workspaces filtered by regex",
   "repository": {
     "type": "git",

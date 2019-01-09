@@ -9,7 +9,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "commander": "^2.19.0",
+    "concurrently": "^4.1.0",
+    "toposort": "^2.0.2"
   },
   "scripts": {
     "release": "release-it"

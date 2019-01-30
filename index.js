@@ -78,6 +78,7 @@ const workspaceDependencies = workspaceNames.reduce(
     workspaceInfo[workspaceName].workspaceDependencies.forEach(dependency => {
       dependencies.push([dependency, workspaceName]);
     });
+    workspaceDependencies.push([workspaceName, null]);
     return dependencies;
   },
   []
@@ -92,7 +93,7 @@ workspaceDependencies.forEach(([upstream, downstream]) =>
 
 let toposortedDependencies;
 try {
-  toposortedDependencies = toposort(workspaceDependencies);
+  toposortedDependencies = toposort(workspaceDependencies).filter(Boolean);
 } catch (error) {
   console.error(
     chalk.red(`Had trouble processing workspace dependencies. ${error.message}`)

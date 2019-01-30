@@ -247,6 +247,11 @@ const targetsInOrder = toposortedDependencies.filter(dependency =>
   allTargetsWithScript.has(dependency)
 );
 
+if (!targetsInOrder.length) {
+  console.log("There is nothing to do.");
+  process.exit(0);
+}
+
 if (parallel) {
   const sleepPath = path.resolve(__dirname, "sleep.js");
   concurrently(

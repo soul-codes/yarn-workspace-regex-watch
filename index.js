@@ -78,7 +78,7 @@ const workspaceDependencies = workspaceNames.reduce(
     workspaceInfo[workspaceName].workspaceDependencies.forEach(dependency => {
       dependencies.push([dependency, workspaceName]);
     });
-    workspaceDependencies.push([workspaceName, null]);
+    dependencies.push([workspaceName, null]);
     return dependencies;
   },
   []

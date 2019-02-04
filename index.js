@@ -166,15 +166,17 @@ if (downstream) {
   let last = primaryTargets;
   while (last.length) {
     const dependents = [];
-    last.map(package =>
+    last.map(package => {
+      if (!package) return;
       (workspaceInfo[package].dependentWorkspaces || []).forEach(dependent => {
+        if (!dependent) return;
         if (!allTargets.has(dependent)) {
           dependents.push(dependent);
           downstreamTargets.push(dependent);
           allTargets.add(dependent);
         }
-      })
-    );
+      });
+    });
     last = dependents;
   }
 }
